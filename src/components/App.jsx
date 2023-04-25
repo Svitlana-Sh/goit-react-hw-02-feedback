@@ -1,5 +1,10 @@
 import { Component } from 'react';
-import { FeedbackOptions, Statistics, Section, Notification } from './Feedback';
+import {
+  FeedbackOptions,
+  Statistics,
+  Section,
+  Notification,
+} from './Feedback';
 import { SectionStyled, SectionPoll } from './Layout';
 
 
@@ -34,7 +39,8 @@ export class App extends Component {
     return (
       <SectionStyled>
         <SectionPoll>
-          <Section title={'Please leave feedback'}>
+          <Section
+            title={'Please leave feedback'}>
             <FeedbackOptions
               options={Object.keys(this.state)}
               onLeaveFeedback={this.leaveFeedback}

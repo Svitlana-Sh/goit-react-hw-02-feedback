@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { nanoid } from 'nanoid';
+import { MessageAlart, MessageTotal } from './feedback-staled';
 
 export const Statistics = ({ feedbackTypes, total, positivePercentage }) => {
   return (
@@ -10,13 +11,22 @@ export const Statistics = ({ feedbackTypes, total, positivePercentage }) => {
           {feedbackType[0]}: {feedbackType[1]}
         </p>
       ))}
-      <p>Total: {total}</p>
-      <p>
-        Positive feesdback: {`${positivePercentage}%`}
-      </p>
+      <MessageAlart>Total: {total}</MessageAlart>
+      <MessageTotal
+        style={{
+          color: getColor(positivePercentage / 100)
+        }}
+      >
+        Positive feedback: {`${positivePercentage}%`}
+      </MessageTotal>
     </div>
   );
 };
+
+function getColor(value) {
+  const hue = ((0 + value) * 120).toString(10);
+  return `hsl(${hue},50%, 47%)`;
+}
 
 Statistics.propTypes = {
   feedbackTypes: PropTypes.objectOf(PropTypes.number.isRequired).isRequired,

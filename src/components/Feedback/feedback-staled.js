@@ -1,10 +1,18 @@
 import styled from 'styled-components';
 
+export const SectionTitleStyled = styled.h2`
+  font-family: 'Gill Sans', sans-serif;
+  font-size: 32px;
+  margin: 35px;
+  margin-bottom: 40px;
+`;
+
 export const FeedbackBtnPoll = styled.button`
   font-family: 'Gill Sans', sans-serif;
   font-size: 16px;
   padding: 10px;
   min-width: 100px;
+  margin-bottom: 20px;
   text-transform: capitalize;
   border: 1px solid #289591;
   border-radius: 15px 15px 15px 0;
@@ -47,4 +55,16 @@ export const FeedbackBtnPoll = styled.button`
       }
     }};
   }
+`;
+
+export const MessageAlart = styled.p`
+  font-family: fantasy;
+  color: #487f7f;
+  font-size: 18px;
+`;
+
+export const MessageTotal = styled.p`
+  font-family: 'Gill Sans', sans-serif;
+  color: #487f7f;
+  font-size: 24px;
 `;

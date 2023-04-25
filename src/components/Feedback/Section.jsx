@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { SectionTitleStyled } from './feedback-staled'
 
 export const Section = ({ title, moreStyles, children }) => {
   return (
     <div moreStyles={moreStyles}>
-      <h2>{title}</h2>
+      <SectionTitleStyled>{title}</SectionTitleStyled>
       {children}
     </div>
   );

@@ -14,5 +14,5 @@ export const SectionStyled = styled.div`
 
 export const SectionPoll = styled.div`
   border-bottom: 3mm ridge rgba(165, 231, 241, 0.8);
-  padding-bottom: 60px;
+  padding-bottom: 30px;
 `;
