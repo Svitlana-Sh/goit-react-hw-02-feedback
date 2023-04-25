@@ -29,7 +29,7 @@ export const FeedbackBtnPoll = styled.button`
       switch (props.name) {
         case 'good':
           return '#0ac829';
-        case 'neutural':
+        case 'neutral':
           return '#f7f53e';
         case 'bad':
           return '#ec7e83';
@@ -46,7 +46,7 @@ export const FeedbackBtnPoll = styled.button`
       switch (props.name) {
         case 'good':
           return '#258e36';
-        case 'neutural':
+        case 'neutral':
           return '#b6b540';
         case 'bad':
           return '#c86a6e';
