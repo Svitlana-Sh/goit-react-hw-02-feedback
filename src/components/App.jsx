@@ -1,5 +1,7 @@
 import { Component } from 'react';
 import { FeedbackOptions, Statistics, Section, Notification } from './Feedback';
+import { SectionStyled, SectionPoll } from './Layout';
+
 
 export class App extends Component {
   state = {
@@ -30,22 +32,15 @@ export class App extends Component {
     const total = this.countTotalFeedback();
 
     return (
-      <div
-        style={{
-          height: '100vh',
-          padding: '60px',
-          justifyContent: 'center',
-          alignItems: 'center',
-          textAlign: 'center',
-          fontSize: 40,
-        }}
-      >
-        <Section title={'Please leave feedback'}>
-          <FeedbackOptions
-            options={Object.keys(this.state)}
-            onLeaveFeedback={this.leaveFeedback}
-          />
-        </Section>
+      <SectionStyled>
+        <SectionPoll>
+          <Section title={'Please leave feedback'}>
+            <FeedbackOptions
+              options={Object.keys(this.state)}
+              onLeaveFeedback={this.leaveFeedback}
+            />
+          </Section>
+        </SectionPoll>
 
         <Section title={'Statistics'}>
           {total ? (
@@ -58,7 +53,7 @@ export class App extends Component {
             <Notification message="There is no feedback" />
           )}
         </Section>
-      </div>
+      </SectionStyled>
     );
   }
 }
